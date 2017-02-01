@@ -1,5 +1,3 @@
-
-
 'use strict'
 
 import React from 'react'
@@ -7,7 +5,8 @@ import ReactDOM from 'react-dom'
 import './css/styles.scss'
 import AddRecipe from 'AddRecipe'
 import RecipeList from 'RecipeList'
-import {Button, Popover, Modal, Tooltip, OverlayTrigger} from 'react-bootstrap';
+import {Button, Popover, Modal, Tooltip, OverlayTrigger} from 'react-bootstrap'
+import Header from './components/Header'
 
 class App extends React.Component {
     constructor(props) {
@@ -19,7 +18,7 @@ class App extends React.Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount() {   
         this.getData()
     }
 
@@ -103,12 +102,13 @@ class App extends React.Component {
     }
 
     render() {
-
         return (
            <Header />
         )
     }
 }
 
-ReactDOM.render(
-    <App/>, document.getElementById('app'))
+// ReactDOM.render(
+//     <App/>, document.getElementById('app'))
+
+module.exports = App
